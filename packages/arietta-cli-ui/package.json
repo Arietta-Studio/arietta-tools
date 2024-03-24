@@ -25,12 +25,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun run type-check && pkgroll --minify -p tsconfig.prod.json --env.NODE_ENV=production",
+    "build": "npm run type-check && pkgroll --minify -p tsconfig.prod.json --env.NODE_ENV=production",
     "dev": "pkgroll -p tsconfig.prod.json --env.NODE_ENV=development --watch",
     "example": "NODE_NO_WARNINGS=1 node --loader=ts-node/esm",
-    "prepare": "bun run build",
+    "prepare": "npm run build",
     "start": "node ./dist/cli.js",
-    "test": "bun run type-check",
+    "test": "npm run type-check",
     "test:coverage": "vitest run --coverage  --passWithNoTests",
     "test:ui": "vitest --passWithNoTests",
     "test:update": "vitest -u",

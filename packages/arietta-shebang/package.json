@@ -25,10 +25,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun run type-check && pkgroll --minify -p tsconfig.prod.json --env.NODE_ENV=production && bun run shebang",
+    "build": "npm run type-check && pkgroll --minify -p tsconfig.prod.json --env.NODE_ENV=production && npm run shebang",
     "dev": "pkgroll -p tsconfig.prod.json --env.NODE_ENV=development --watch",
-    "link": "bun run build && bun link -f",
-    "prepare": "bun run build",
+    "link": "npm run build && npm link -f",
+    "prepare": "npm run build",
     "shebang": "node ./dist/cli.js -t ./dist/cli.js",
     "start": "node ./dist/cli.js",
     "test": "vitest --passWithNoTests",
