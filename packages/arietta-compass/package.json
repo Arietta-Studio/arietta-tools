@@ -1,6 +1,6 @@
 {
   "name": "@arietta-studio/arietta-compass",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Arietta Compass is a CLI tool that uses ChatGPT to generate Gitmoji-based commit messages",
   "keywords": [
     "ai",
@@ -47,7 +47,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@arietta-studio/arietta-cli-ui": "latest",
+    "@arietta-studio/arietta-cli-ui": "1.0.2",
     "@inkjs/ui": "^1",
     "@langchain/core": "latest",
     "@langchain/openai": "latest",
