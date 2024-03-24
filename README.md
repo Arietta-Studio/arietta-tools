@@ -30,8 +30,6 @@ AI CLI Tools, enhancing git and i18n workflow efficiency
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
 | [**🌏 Arietta i18n**][arietta-i18n-github]<br/>Automation tool for the i18n (internationalization) translation process, powered by ChatGPT. It supports features such as automatic splitting of large files, incremental updates, and customization options for the OpenAI model, API proxy, and temperature.<br/><br/>[![][arietta-i18n-version] ![][arietta-i18n-download]][arietta-i18n-url] | [![][arietta-i18n-cover]][arietta-i18n-github]       |
 
-|
-
 <div align="right">
 
 [![][back-to-top]](#readme-top)
