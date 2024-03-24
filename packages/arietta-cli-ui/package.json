@@ -1,0 +1,61 @@
+{
+  "name": "@arietta-studio/arietta-cli-ui",
+  "version": "1.0.0",
+  "description": "Arietta CLI UI Kit for Ink.js and React",
+  "homepage": "https://github.com/arietta-studio/arietta-tools/tree/master/packages/arietta-cli-ui",
+  "bugs": {
+    "url": "https://github.com/arietta-studio/arietta-tools/issues/new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arietta-studio/arietta-tools.git"
+  },
+  "license": "MIT",
+  "author": "Arietta Studio <info@arietta-studio.ai>",
+  "sideEffects": false,
+  "type": "module",
+  "imports": {
+    "@": "./src"
+  },
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run type-check && pkgroll --minify -p tsconfig.prod.json --env.NODE_ENV=production",
+    "dev": "pkgroll -p tsconfig.prod.json --env.NODE_ENV=development --watch",
+    "example": "NODE_NO_WARNINGS=1 node --loader=ts-node/esm",
+    "prepare": "bun run build",
+    "start": "node ./dist/cli.js",
+    "test": "bun run type-check",
+    "test:coverage": "vitest run --coverage  --passWithNoTests",
+    "test:ui": "vitest --passWithNoTests",
+    "test:update": "vitest -u",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@inkjs/ui": "^1",
+    "arr-rotate": "^1",
+    "consola": "^3",
+    "fast-deep-equal": "^3",
+    "figures": "^6",
+    "ink": "^4.2",
+    "react": "^18"
+  },
+  "peerDependencies": {
+    "@inkjs/ui": ">=1",
+    "consola": ">=3",
+    "ink": ">=4",
+    "react": ">=18"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

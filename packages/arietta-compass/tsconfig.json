@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": ["src/*"],
+      "@arietta-studio/arietta-cli-ui": ["./packages/arietta-cli-ui/src"],
+      "@arietta-studio/arietta-cli-ui/*": ["./packages/arietta-cli-ui/src/*"]
+    }
+  },
+  "extends": "../../tsconfig.json",
+  "include": ["src", "**/*.ts", "**/*.d.ts", "**/*.tsx"]
+}

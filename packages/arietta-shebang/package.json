@@ -1,0 +1,50 @@
+{
+  "name": "@arietta-studio/arietta-shebang",
+  "version": "1.0.0",
+  "description": "Add shebang to target file",
+  "homepage": "https://github.com/arietta-studio/arietta-tools/tree/master/packages/arietta-shebang",
+  "bugs": {
+    "url": "https://github.com/arietta-studio/arietta-tools/issues/new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arietta-studio/arietta-tools.git"
+  },
+  "license": "MIT",
+  "author": "Arietta Studio <info@arietta-studio.ai>",
+  "sideEffects": false,
+  "type": "module",
+  "imports": {
+    "@": "./src"
+  },
+  "bin": {
+    "arietta-shebang": "dist/cli.js",
+    "shebang": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run type-check && pkgroll --minify -p tsconfig.prod.json --env.NODE_ENV=production && bun run shebang",
+    "dev": "pkgroll -p tsconfig.prod.json --env.NODE_ENV=development --watch",
+    "link": "bun run build && bun link -f",
+    "prepare": "bun run build",
+    "shebang": "node ./dist/cli.js -t ./dist/cli.js",
+    "start": "node ./dist/cli.js",
+    "test": "vitest --passWithNoTests",
+    "test:coverage": "vitest run --coverage --passWithNoTests",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "commander": "^11",
+    "consola": "^3",
+    "update-notifier": "^7"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

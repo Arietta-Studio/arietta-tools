@@ -1,0 +1,90 @@
+{
+  "name": "arietta-tools",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/arietta-studio/arietta-tools",
+  "bugs": {
+    "url": "https://github.com/arietta-studio/arietta-tools/issues/new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arietta-studio/arietta-tools.git"
+  },
+  "license": "MIT",
+  "author": "Arietta Studio <info@arietta-studio.ai>",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build --parallel",
+    "ci": "bun run type-check && bun run lint",
+    "dev": "lerna run dev --parallel",
+    "dev:commit": "bun run dev --prefix=packages/arietta-compass",
+    "dev:i18n": "bun run dev --prefix=packages/arietta-i18n",
+    "dev:ui": "bun run dev --prefix=packages/arietta-cli-ui",
+    "link:commit": "bun run link --prefix=packages/arietta-compass",
+    "link:i18n": "bun run link --prefix=packages/arietta-i18n",
+    "lint": "eslint \"{src,packages}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:md": "remark . --quiet --output",
+    "prepare": "husky install",
+    "prettier": "prettier -c --write \"**/**\"",
+    "release": "multi-semantic-release",
+    "start": "bun run dev",
+    "test": "lerna run test --parallel && bun run lint",
+    "type-check": "lerna run type-check --parallel"
+  },
+  "lint-staged": {
+    "*.md": [
+      "remark --quiet --output --",
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.json": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{js,jsx,cjs,mjs}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --parser=typescript --write",
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18",
+    "@arietta-studio/arietta-shebang": "^1",
+    "@arietta-studio/lint": "latest",
+    "@sindresorhus/tsconfig": "^5",
+    "@types/lodash-es": "^4",
+    "@types/node": "^20",
+    "@types/pangu": "^4",
+    "@types/react": "^18",
+    "@types/update-notifier": "^6",
+    "@umijs/lint": "^4",
+    "@vitest/coverage-v8": "latest",
+    "clean-pkg-json": "^1",
+    "commitlint": "^18",
+    "eslint": "^8",
+    "husky": "^8",
+    "ink-testing-library": "^3",
+    "lerna": "^8",
+    "lint-staged": "^15",
+    "multi-semantic-release": "^3",
+    "pkgroll": "^2",
+    "prettier": "^3",
+    "remark": "^14",
+    "remark-cli": "^11",
+    "semantic-release": "^21",
+    "stylelint": "latest",
+    "ts-node": "^10",
+    "typescript": "^5",
+    "vitest": "latest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

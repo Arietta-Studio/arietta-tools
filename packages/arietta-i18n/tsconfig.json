@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": ["src/*"],
+      "@arietta-studio/arietta-cli-ui": ["./packages/arietta-cli-ui/src"],
+      "@arietta-studio/arietta-cli-ui/*": ["./packages/arietta-cli-ui/src/*"],
+      "@arietta-studio/arietta-i18n": ["./packages/arietta-i18n/src"],
+      "@arietta-studio/arietta-i18n/*": ["./packages/arietta-i18n/src/*"]
+    }
+  },
+  "extends": "../../tsconfig.json",
+  "include": ["src", "**/*.ts", "**/*.d.ts", "**/*.tsx", ".i18nrc.ts"]
+}
