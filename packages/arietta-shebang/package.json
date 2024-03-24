@@ -1,6 +1,6 @@
 {
   "name": "@arietta-studio/arietta-shebang",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Add shebang to target file",
   "homepage": "https://github.com/arietta-studio/arietta-tools/tree/master/packages/arietta-shebang",
   "bugs": {
