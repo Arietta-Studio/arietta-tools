@@ -1,6 +1,6 @@
 {
   "name": "@arietta-studio/arietta-i18n",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Arietta i18n is a CLI tool that automate translate your i18n localization with AI",
   "keywords": [
     "ai",
@@ -54,7 +54,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@arietta-studio/arietta-cli-ui": "1.0.2",
+    "@arietta-studio/arietta-cli-ui": "1.0.3",
     "@inkjs/ui": "^1",
     "@langchain/core": "latest",
     "@langchain/openai": "latest",
