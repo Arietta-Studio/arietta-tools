@@ -2,8 +2,7 @@
 
 <img height="120" src="https://unpkg.com/@arietta-studio/assets-logo@latest/assets/logo-3d.webp" style="vertical-align: middle;">
 <img height="120" src="https://gw.alipayobjects.com/zos/kitchen/qJ3l3EPsdW/split.svg" style="vertical-align: middle;">
-<img height="120" src="https://unpkg.com/@arietta-studio/assets-emoji@latest/assets/globe-showing-asia-australia.webp" style="vertical-align: middle;">
-
+<img height="120" src="https://unpkg.com/@arietta-studio/assets-emoji@latest/assets/globe-showing-europe-africa.webp" style="vertical-align: middle;">
 
 <h1>Arietta i18n</h1>
 
@@ -309,7 +308,7 @@ module.exports = {
     entry: ['./README.md', './docs/**/*.md'],
     entryLocale: 'en-US',
     entryExtension: '.md',
-    outputLocales: ['lt-LT',],
+    outputLocales: ['lt-LT'],
     outputExtensions: (locale, { getDefaultExtension }) => {
       if (locale === 'en-US') return '.md';
       return getDefaultExtension(locale);
@@ -367,10 +366,10 @@ The translated files will be generated in the same directory as the entry file, 
 
 ```
 - README.md
-- README.zh-CN.md
+- README.lt-LT.md
 	- docs
 		- usage.md
-		- usage.zh-CN.md
+		- usage.lt-LT.md
 		- subfolder
             - ...
 ```
