@@ -18,7 +18,7 @@ AI CLI Tools, enhancing git and i18n workflow efficiency
 [![][github-issues-shield]][github-issues-link]
 [![][github-license-shield]][github-license-link]
 
-![][split]
+![](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 </div>
 
@@ -147,7 +147,6 @@ This project is [MIT](./LICENSE) licensed.
 [shebang-github]: https://github.com/arietta-studio/arietta-tools/tree/master/packages/arietta-shebang/README.md
 [shebang-shield]: https://img.shields.io/npm/v/@arietta-studio/arietta-shebang?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
 [shebang-url]: https://www.npmjs.com/package/@arietta-studio/arietta-shebang
-[split]: https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png
 [ui-download]: https://img.shields.io/npm/dt/@arietta-studio/arietta-cli-ui?labelColor=black&style=flat-square
 [ui-github]: https://github.com/arietta-studio/arietta-tools/tree/master/packages/arietta-cli-ui/README.md
 [ui-shield]: https://img.shields.io/npm/v/@arietta-studio/arietta-cli-ui?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
