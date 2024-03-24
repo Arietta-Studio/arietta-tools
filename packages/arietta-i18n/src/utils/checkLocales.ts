@@ -27,7 +27,9 @@ export const checkLocaleFolders = (config: I18nConfig, filenames: string[]) => {
       try {
         const dirPath = dirname(filePath);
         mkdirSync(dirPath, { recursive: true });
-      } catch {}
+      } catch {
+        console.error(`Error creating directory: ${filePath}`);
+      }
       if (!existsSync(filePath)) {
         writeJSON(filePath, {});
       }
