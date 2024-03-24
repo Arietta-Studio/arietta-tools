@@ -1,6 +1,6 @@
 {
   "name": "@arietta-studio/arietta-cli-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Arietta CLI UI Kit for Ink.js and React",
   "homepage": "https://github.com/arietta-studio/arietta-tools/tree/master/packages/arietta-cli-ui",
   "bugs": {
