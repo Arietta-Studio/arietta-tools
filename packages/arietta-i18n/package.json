@@ -44,9 +44,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run type-check && pkgroll --minify -p tsconfig.prod.json --env.NODE_ENV=production && npm run shebang",
+    "build": "bun run type-check && pkgroll --minify -p tsconfig.prod.json --env.NODE_ENV=production && bun run shebang",
     "dev": "pkgroll -p tsconfig.prod.json --env.NODE_ENV=development --watch",
-    "link": "npm run build && npm link -f",
+    "link": "bun run build && bun link -f",
     "shebang": "arietta-shebang -t ./dist/cli.js",
     "start": "node ./dist/cli.js",
     "test": "vitest --passWithNoTests",
